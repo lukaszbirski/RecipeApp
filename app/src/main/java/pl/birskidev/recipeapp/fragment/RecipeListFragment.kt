@@ -1,4 +1,4 @@
-package pl.birskidev.recipeapp
+package pl.birskidev.recipeapp.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,9 +16,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
+import pl.birskidev.recipeapp.BaseApplication
+import pl.birskidev.recipeapp.R
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class RecipeListFragment: Fragment() {
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
