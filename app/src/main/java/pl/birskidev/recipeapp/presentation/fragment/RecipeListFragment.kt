@@ -1,6 +1,7 @@
-package pl.birskidev.recipeapp.fragment
+package pl.birskidev.recipeapp.presentation.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,14 +16,16 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.*
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
-import pl.birskidev.recipeapp.BaseApplication
 import pl.birskidev.recipeapp.R
-import javax.inject.Inject
+import pl.birskidev.recipeapp.presentation.viewmodel.RecipeListViewModel
 
 @AndroidEntryPoint
 class RecipeListFragment: Fragment() {
+
+    private val viewModel : RecipeListViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
